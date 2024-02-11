@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fantasy;
+}
+
+.principalFormat {
+    background: #090909;
+}
+
+/* header  */
+
+.formHeader {
+    position: sticky;
+    top: 10px;
+    /* Esto hace que el encabezado se pegue en la parte superior de la ventana de visualización */
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.formHeader:hover {
+    box-shadow: 10px 2px 29px 5px rgb(36, 85, 247);
+    transition: 0.5s;
+}
+
+.contentButt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+/* botones  */
+
+.styleButton {
+    text-align: center;
+    width: 97px;
+    text-decoration: none;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 5px 2px 29px 5px rgb(36, 85, 247);
+}
+
+.styleButton:hover {
+    background: white;
+    color: #0d6efd;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+/* contenido de home  */
+
+.formTextTitle {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    color: white;
+}
+
+.formTextTitle:hover span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-100%);
+    animation-name: drop;
+    animation-duration: .1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
+#moveStyle {
+    color: #0d6efd;
+    font-size: 1.5em;
+    font-weight: bold;
+    overflow: hidden;
+    /* Oculta el texto que excede el contenedor */
+    border-right: .15em solid black;
+    /* Crea el cursor parpadeante */
+    white-space: nowrap;
+    /* Mantiene el texto en una sola línea */
+    margin: 0 auto;
+    /* Centra el texto */
+    letter-spacing: .1em;
+    /* Espaciado entre letras */
+    animation:
+        typing 3.5s steps(40, end) infinite,
+        /* Ajusta el número de pasos al número de caracteres en tu texto */
+        blink-caret .75s step-end infinite;
+    /* Parpadeo del cursor */
+}
+
+#positionCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#styleCard {
+    background: #090909;
+    color: white;
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    max-width: 640px;
+    border: .5px solid #0d6efd;
+}
+
+#styleCard:hover {
+    box-shadow: 5px 5px 10px 5px rgb(36, 85, 247);
+    transition: 0.5s;
+}
+
+
+#textoFormCard {
+    text-align: justify;
+    line-height: 2;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px;
+}
+
+/* abour me  */
+
+#ajustarImg {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(36, 85, 247);
+    /* Agrega sombra para profundidad */
+    transition: filter 0.3s ease-in-out;
+}
+
+#ajustarImg:hover {
+    filter: grayscale(100%);
+}
+
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+#formatTextMi {
+    overflow: hidden;
+    margin: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: slideInFromRight 2s forwards;
+}
+
+/* educacion  */
+
+.formCardI {
+    background: black;
+    border: 2px solid #0d6efd;
+    transition: all .5s ease-in-out;
+
+}
+
+.formCardI:hover {
+    box-shadow: 5px 5px 5px 10px rgb(36, 85, 247);
+    transform: scale(1.05);
+}
+
+.configureTitle {
+    text-align: center;
+    margin: 30px;
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+.formInter {
+    text-align: center;
+    align-items: center;
+    margin: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.configureImg {
+    margin-top: 20px;
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+    border-radius: 30%;
+    overflow: hidden;
+}
+
+
+/* contactame */
+
+#whatsappI {
+    /* display: inline-block; */
+    margin: 10px;
+    padding: 4px;
+    color: green;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 25px;
+
+}
+
+#linkedinI {
+    margin: 15px;
+    color: #0d6efd;
+    /* display: inline-block; */
+    border-radius: 50%;
+    /* Esto hace que el icono sea circular */
+    padding: 4px;
+    /* Espaciado interno para ajustar el icono dentro del círculo */
+    background-color: #fff;
+    /* Color de fondo del círculo */
+    font-size: 25px;
+}
+
+
+#githubI {
+    margin: 10px;
+    padding: 4px;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+#githubI:hover,
+#linkedinI:hover,
+#whatsappI:hover {
+    background-color: #0d6efd;
+    color: #fff;
+    box-shadow: 0px 1px 2px 1px rgb(36, 85, 247);
+}
+
+/* footer */
+
+#formFoot {
+    color: white;
+    box-shadow: 0px 1px 2px 1px rgb(36, 85, 247);
+}
+
+
+#girateFot:hover {
+    color: #0d6efd;
+    transition: 0.5s;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* estilo al acer click en links internos  */
+
+.highlightedTitle {
+    padding-top: 55px;
+    color: #0d6efd;
+    transition: color 2s ease-in-out;
+}
